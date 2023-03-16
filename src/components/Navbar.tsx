@@ -6,16 +6,20 @@ import logotype from '../assets/logotype.png';
 import logo from '../assets/logo.png';
 import github from '../assets/github.svg';
 import { Burger, Container, MediaQuery, Tooltip } from '@mantine/core';
+import { useHover, useMergedRef, useMouse } from '@mantine/hooks';
 
 function Navbar() {
   const { sections } = useContext(SectionsContext);
   const [opened, setOpened] = useState(false);
+  const { ref: refMouse, x, y } = useMouse();
+  const { hovered, ref: refHover } = useHover();
+  const ref = useMergedRef(refMouse, refHover);
 
   return (
     <>
       <MediaQuery smallerThan={'sm'} styles={{ display: 'none !important' }}>
         <Container size={'xl'} className={classes.NavbarContainer}>
-          <div className={classes.Navbar}>
+          <div className={classes.Navbar} ref={ref}>
             <Link to={'/'}>
               <MediaQuery styles={{ display: 'none !important' }} smallerThan={'md'}>
                 <img src={logotype} alt="" />
@@ -25,6 +29,7 @@ function Navbar() {
               </MediaQuery>
             </Link>
             <div></div>
+            <figure style={{ left: x, top: y, opacity: hovered ? 1 : 0 }}></figure>
             {sections.map((section) => (
               <Link to={section} key={section} className={classes.Link}>
                 {section || 'home'}
@@ -36,6 +41,8 @@ function Navbar() {
               color={'black'}
               offset={-10}
               openDelay={500}
+              withinPortal
+              zIndex={100000}
             >
               <a href="https://github.com/michalmarchewczyk" target="_blank" rel="noreferrer">
                 <img src={github} alt={'GitHub profile'} />

@@ -21,6 +21,7 @@
   z-index: 10000;
   padding-right: 40px;
   padding-left: 10px;
+  overflow: hidden;
 
   a:first-child {
     display: block;
@@ -33,6 +34,18 @@
 
   div {
     flex: 1;
+  }
+
+  figure {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: red;
+    margin-left: -201px;
+    margin-top: -201px;
+    z-index: -1;
+    background: radial-gradient(closest-side, rgba(255,255,255,0.6), rgba(255,255,255,0.6) 10%, rgba(255,255,255,0));
+    transition: opacity 0.2s linear;
   }
 
   a:last-child {
