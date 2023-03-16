@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logotype from '../assets/logotype.png';
 import logo from '../assets/logo.png';
 import github from '../assets/github.svg';
-import { Burger, MediaQuery, Tooltip } from '@mantine/core';
+import { Burger, Container, MediaQuery, Tooltip } from '@mantine/core';
 
 function Navbar() {
   const { sections } = useContext(SectionsContext);
@@ -15,31 +15,33 @@ function Navbar() {
     <>
       <MediaQuery smallerThan={'sm'} styles={{ display: 'none !important' }}>
         <div className={classes.Navbar}>
-          <Link to={'/'}>
-            <MediaQuery styles={{ display: 'none !important' }} smallerThan={'md'}>
-              <img src={logotype} alt="" />
-            </MediaQuery>
-            <MediaQuery styles={{ display: 'none !important' }} largerThan={'md'}>
-              <img src={logo} alt="" />
-            </MediaQuery>
-          </Link>
-          <div></div>
-          {sections.map((section) => (
-            <Link to={section} key={section} className={classes.Link}>
-              {section || 'home'}
+          <Container size={'xl'}>
+            <Link to={'/'}>
+              <MediaQuery styles={{ display: 'none !important' }} smallerThan={'md'}>
+                <img src={logotype} alt="" />
+              </MediaQuery>
+              <MediaQuery styles={{ display: 'none !important' }} largerThan={'md'}>
+                <img src={logo} alt="" />
+              </MediaQuery>
             </Link>
-          ))}
-          <Tooltip
-            label={'My GitHub profile'}
-            position={'bottom'}
-            color={'black'}
-            offset={-10}
-            openDelay={500}
-          >
-            <a href="https://github.com/michalmarchewczyk" target="_blank" rel="noreferrer">
-              <img src={github} alt={'GitHub profile'} />
-            </a>
-          </Tooltip>
+            <div></div>
+            {sections.map((section) => (
+              <Link to={section} key={section} className={classes.Link}>
+                {section || 'home'}
+              </Link>
+            ))}
+            <Tooltip
+              label={'My GitHub profile'}
+              position={'bottom'}
+              color={'black'}
+              offset={-10}
+              openDelay={500}
+            >
+              <a href="https://github.com/michalmarchewczyk" target="_blank" rel="noreferrer">
+                <img src={github} alt={'GitHub profile'} />
+              </a>
+            </Tooltip>
+          </Container>
         </div>
       </MediaQuery>
       <MediaQuery largerThan={'sm'} styles={{ display: 'none !important' }}>

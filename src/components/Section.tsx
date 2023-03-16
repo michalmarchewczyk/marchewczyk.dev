@@ -60,9 +60,9 @@ function Section({ name, children }: { name: string; children: React.ReactNode }
   }, [inView]);
 
   return (
-    <div id={name} ref={targetRef}>
+    <section id={name} ref={targetRef}>
       {children}
-    </div>
+    </section>
   );
 }
 

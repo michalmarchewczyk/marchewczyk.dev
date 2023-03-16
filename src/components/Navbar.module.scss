@@ -1,7 +1,6 @@
 .Navbar {
   position: fixed;
-  display: flex;
-  column-gap: 40px;
+  display: block;
   top: 15px;
   left: 15px;
   right: 15px;
@@ -9,12 +8,20 @@
   background-color: rgba(255,255,255,0.7);
   backdrop-filter: blur(8px);
   align-items: center;
-  padding-right: 40px;
-  padding-left: 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 20px rgb(0,0,0,0.1);
+  z-index: 10000;
 
-  a:first-child {
+  & > div {
+    display: flex;
+    column-gap: 40px;
+    height: 100%;
+    align-items: center;
+    padding-right: 32px;
+  }
+
+  div > a:first-child {
     display: block;
     align-self: stretch;
     img {
@@ -23,11 +30,11 @@
     }
   }
 
-  div {
+  div > div {
     flex: 1;
   }
 
-  a:last-child {
+  div > a:last-child {
     display: block;
     align-self: stretch;
     img {
@@ -52,19 +59,32 @@
   padding-right: 30px;
   padding-left: 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 4px 20px rgb(0,0,0,0.1);
   justify-content: space-between;
+  z-index: 10000;
 
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+    z-index: -2;
+  }
 
   &::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255,255,255,0.7);
-    backdrop-filter: blur(8px);
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     z-index: -1;
   }
 

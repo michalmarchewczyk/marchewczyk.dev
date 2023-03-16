@@ -5,6 +5,7 @@ import About from './sections/About';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import { SectionsContext } from '../components/sections';
+import { Container } from '@mantine/core';
 
 function Home() {
   const { section } = useParams();
@@ -15,12 +16,12 @@ function Home() {
   }, [section]);
 
   return (
-    <div>
+    <Container size={'xl'}>
       <Header />
       <About />
       <Projects />
       <Contact />
-    </div>
+    </Container>
   );
 }
 
