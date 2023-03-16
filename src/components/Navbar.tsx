@@ -31,7 +31,7 @@ function Navbar() {
             <div></div>
             <figure style={{ left: x, top: y, opacity: hovered ? 1 : 0 }}></figure>
             {sections.map((section) => (
-              <Link to={section} key={section} className={classes.Link}>
+              <Link to={section} key={section} className={classes.Link} replace={true}>
                 {section || 'home'}
               </Link>
             ))}

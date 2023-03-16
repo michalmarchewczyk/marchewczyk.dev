@@ -16,7 +16,7 @@ function Home() {
   }, [section]);
 
   return (
-    <Container size={'xl'}>
+    <Container size={'xl'} p={30}>
       <Header />
       <About />
       <Projects />

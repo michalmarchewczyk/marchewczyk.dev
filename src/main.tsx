@@ -7,7 +7,13 @@ import './main.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        fontFamily: 'Poppins, sans-serif',
+      }}
+    >
       <BrowserRouter>
         <App />
       </BrowserRouter>

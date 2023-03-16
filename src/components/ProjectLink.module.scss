@@ -1,0 +1,86 @@
+
+.CardContainer {
+  perspective: 2000px;
+  perspective-origin: 50% 50%;
+  > div {
+    transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  &:hover {
+    > div {
+      transition: transform 0.0s linear;
+    }
+  }
+}
+
+.Card {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: row;
+  position: relative;
+  min-height: 100px;
+  height: 100%;
+  background-color: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 20px rgb(0,0,0,0.1);
+  padding: 30px;
+  gap: 30px;
+  --hover-x: 0;
+  --hover-y: 0;
+
+  transform: rotateX(calc(var(--hover-y) * 4deg)) rotateY(calc(var(--hover-x) * -4deg));
+
+  figure {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: red;
+    margin-left: -301px;
+    margin-top: -301px;
+    z-index: -1;
+    background: radial-gradient(closest-side, rgba(255,255,255,0.7), rgba(255,255,255,0.7) 10%, rgba(255,255,255,0));
+    transition: opacity 0.2s linear;
+  }
+
+  > div:first-child {
+    flex-grow: 10;
+    max-width: 100%;
+    a {
+      display: block;
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      right: -30px;
+      bottom: -30px;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  > div:nth-child(2) {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+      text-decoration: none;
+      width: 100%;
+    }
+  }
+}
+
+.CardLg {
+  width: 100%;
+}
+
+.CardSm {
+  flex: 1;
+  min-width: 400px;
+  > div {
+    flex-wrap: wrap;
+  }
+}

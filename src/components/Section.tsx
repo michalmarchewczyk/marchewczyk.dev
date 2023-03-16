@@ -54,7 +54,7 @@ function Section({ name, children }: { name: string; children: React.ReactNode }
   useEffect(() => {
     if (inView && !isScrolling) {
       if ((name === '' && location.pathname !== '/') || !location.pathname.startsWith(`/${name}`)) {
-        navigate(`/${name}`);
+        navigate(`/${name}`, { replace: true });
       }
     }
   }, [inView]);

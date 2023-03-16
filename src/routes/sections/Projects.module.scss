@@ -1,5 +1,17 @@
 .Projects {
   min-height: 160vh;
-  border: 3px solid red;
-  font-size: 4rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  row-gap: 50px;
+  column-gap: 50px;
+}
+
+h2 {
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
 }
