@@ -14,8 +14,8 @@ function Navbar() {
   return (
     <>
       <MediaQuery smallerThan={'sm'} styles={{ display: 'none !important' }}>
-        <div className={classes.Navbar}>
-          <Container size={'xl'}>
+        <Container size={'xl'} className={classes.NavbarContainer}>
+          <div className={classes.Navbar}>
             <Link to={'/'}>
               <MediaQuery styles={{ display: 'none !important' }} smallerThan={'md'}>
                 <img src={logotype} alt="" />
@@ -41,8 +41,8 @@ function Navbar() {
                 <img src={github} alt={'GitHub profile'} />
               </a>
             </Tooltip>
-          </Container>
-        </div>
+          </div>
+        </Container>
       </MediaQuery>
       <MediaQuery largerThan={'sm'} styles={{ display: 'none !important' }}>
         <div
