@@ -8,7 +8,7 @@ import { SectionsContext } from '../components/sections';
 import { Container } from '@mantine/core';
 
 function Home() {
-  const { section } = useParams();
+  const { section } = useParams<{ section: string }>();
   const { setCurrentSection } = useContext(SectionsContext);
 
   useEffect(() => {

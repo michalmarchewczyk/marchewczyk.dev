@@ -1,0 +1,45 @@
+.ProjectContainer {
+  display: block;
+  max-width: 100%;
+}
+
+.ProjectImages {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.Image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.BackButton {
+  position: absolute;
+  color: black;
+  top: 16px;
+  right: 16px;
+  box-shadow: var(--mantine-shadow-md);
+  background: rgba(255,255,255,0.85);
+  z-index: 100;
+  &:hover {
+    background: rgba(255,255,255,1);
+  }
+}
+
+.ProjectLinks {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: auto;
+  a {
+    display: block;
+  }
+}
+
+.ProjectData {
+  div {
+    text-transform: none;
+  }
+}

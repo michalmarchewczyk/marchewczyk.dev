@@ -10,6 +10,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <MantineProvider
       withGlobalStyles
       withNormalizeCSS
+      withCSSVariables
       theme={{
         fontFamily: 'Poppins, sans-serif',
       }}

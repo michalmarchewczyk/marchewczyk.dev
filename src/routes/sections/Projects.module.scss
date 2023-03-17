@@ -7,11 +7,13 @@
   align-content: flex-start;
   row-gap: 50px;
   column-gap: 50px;
+
+  h2 {
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
 }
 
-h2 {
-  font-size: 60px;
-  margin-top: 0;
-  margin-bottom: 0;
-  width: 100%;
-}
+

@@ -1,29 +1,18 @@
 import React, { CSSProperties } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Badge, Button, Card, Text } from '@mantine/core';
 import classes from './ProjectLink.module.scss';
 import { useHover, useMergedRef, useMouse } from '@mantine/hooks';
 import github from '../assets/github-white.svg';
 import { IconExternalLink } from '@tabler/icons-react';
+import { ProjectData } from '../lib/projects';
 
-export interface Project {
-  key: string;
-  category: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  index: number;
-  size: 'sm' | 'lg';
-  thumbnail: string;
-  github: string;
-  url: string;
-}
-
-function ProjectLink({ project }: { project: Project }) {
+function ProjectLink({ project }: { project: ProjectData }) {
   const { ref: refMouse, x, y } = useMouse();
   const { hovered, ref: refHover } = useHover();
   const ref = useMergedRef(refMouse, refHover);
   const rect = refMouse.current?.getBoundingClientRect();
+  const location = useLocation();
 
   return (
     <div
@@ -42,15 +31,15 @@ function ProjectLink({ project }: { project: Project }) {
         }
       >
         <div>
-          <Link to={project.key}></Link>
+          <Link to={'/projects/' + project.key} state={{ backgroundLocation: location }}></Link>
           <img src={project.thumbnail} alt={''} />
         </div>
         <div>
-          <Link to={project.key}>
+          <Link to={'/projects/' + project.key} state={{ backgroundLocation: location }}>
             <Text color="#888888" size={20} weight={700}>
               {project.category}
             </Text>
-            <Text color="black" size={40} weight={700} mt={0} mb={8}>
+            <Text color="black" size={40} weight={700} mt={-4} mb={8}>
               {project.title}
             </Text>
 
@@ -61,7 +50,7 @@ function ProjectLink({ project }: { project: Project }) {
             ))}
 
             {project.size === 'lg' && (
-              <Text color="#444444" size={20} weight={500} mt={12} mb={8}>
+              <Text color="#444444" size={18} weight={500} mt={12} mb={8} lineClamp={4}>
                 {project.description}
               </Text>
             )}
@@ -80,7 +69,7 @@ function ProjectLink({ project }: { project: Project }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View source code
+              View source
             </Button>
           )}
           {project.url && project.size === 'lg' && (
