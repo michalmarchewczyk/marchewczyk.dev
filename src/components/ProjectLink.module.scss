@@ -7,7 +7,7 @@
   }
   &:hover {
     > div {
-      transition: transform 0.0s linear;
+      transition: transform 0.05s linear;
     }
   }
 }
@@ -27,6 +27,10 @@
   gap: 30px;
   --hover-x: 0;
   --hover-y: 0;
+  @media (max-width: 500px){
+    padding: 20px;
+    gap: 20px;
+  }
 
   transform: rotateX(calc(var(--hover-y) * 4deg)) rotateY(calc(var(--hover-x) * -4deg));
 
@@ -78,11 +82,28 @@
 
 .CardLg {
   width: 100%;
+  @media (max-width: 926px) {
+    > div {
+      flex-wrap: wrap;
+      > div:nth-child(2) {
+        min-width: 0;
+      }
+    }
+  }
+
 }
 
 .CardSm {
   flex: 1;
   min-width: 400px;
+  @media (max-width: 926px) {
+    min-width: 100%;
+    > div {
+      > div:nth-child(2) {
+        min-width: 0;
+      }
+    }
+  }
   > div {
     flex-wrap: wrap;
   }
