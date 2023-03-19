@@ -30,6 +30,7 @@ function App() {
       >
         <Routes location={state?.backgroundLocation || location}>
           <Route path="/" element={<Layout />}>
+            <Route path="/test" element={<div style={{ height: '400vh' }} />} />
             <Route path="/:section?" element={<Home />} />
             <Route path="/projects/:id" element={<ProjectPage />}></Route>
           </Route>
