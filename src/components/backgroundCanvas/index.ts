@@ -39,12 +39,7 @@ export const load = (canvas: HTMLCanvasElement) => {
   devCamera.position.set(500, 500, 500);
   devCamera.lookAt(0, 0, 0);
 
-  const camera = new THREE.PerspectiveCamera(
-    90,
-    window.innerWidth / window.innerHeight,
-    0.01,
-    2000,
-  );
+  const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.01, 500);
   camera.position.z = 160;
   camera.lookAt(0, 0, 0);
   if (dev) {
@@ -99,7 +94,12 @@ export const load = (canvas: HTMLCanvasElement) => {
     camera.position.y = (-20 * y) / window.innerHeight;
   };
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false });
+  const renderer = new THREE.WebGLRenderer({
+    canvas,
+    antialias: false,
+    powerPreference: 'high-performance',
+    depth: false,
+  });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setAnimationLoop(animate);
   renderer.setClearColor(new THREE.Color('hsl(200,30%,75%)'), 1);

@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import classes from './Background.module.scss';
-import { load } from './backgroundCanvas';
 
 function Background() {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      load(ref.current);
-    }
+    import('./backgroundCanvas').then(({ load }) => {
+      if (ref.current) {
+        load(ref.current);
+      }
+    });
   }, []);
 
   return (

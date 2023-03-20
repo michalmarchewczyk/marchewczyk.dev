@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Modal } from '@mantine/core';
-import Project from './Project';
 import { useMediaQuery } from '@mantine/hooks';
+
+const Project = React.lazy(() => import('./Project'));
 
 function ProjectModal() {
   const { id } = useParams<{ id: string }>();
@@ -40,7 +41,9 @@ function ProjectModal() {
       fullScreen={isMobile}
       withCloseButton={false}
     >
-      <Project id={id ?? ''} />
+      <Suspense>
+        <Project id={id ?? ''} />
+      </Suspense>
     </Modal>
   );
 }
