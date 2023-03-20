@@ -16,7 +16,7 @@ function Home() {
   }, [section]);
 
   return (
-    <Container size={'xl'} p={30} sx={{ '@media (max-width: 500px)': { padding: 10 } }}>
+    <Container size={'xl'} p={40} pt={0} sx={{ '@media (max-width: 500px)': { padding: 10 } }}>
       <Header />
       <About />
       <Projects />

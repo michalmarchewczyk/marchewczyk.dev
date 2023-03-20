@@ -5,7 +5,9 @@ import classes from './About.module.scss';
 function About() {
   return (
     <Section name={'about'}>
-      <div className={classes.About}>About</div>
+      <div className={classes.About}>
+        <h2>About me</h2>
+      </div>
     </Section>
   );
 }

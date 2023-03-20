@@ -17,7 +17,7 @@ export const generateLine = (pointsBoxSize: THREE.Vector3) => {
   let rotationOffset = 0;
   let heightOffset = 0;
   const xOffset = window.innerWidth / 20;
-  const randomSizesSeed = new Array(33 * 16).fill(0).map(() => THREE.MathUtils.randFloat(1.8, 4));
+  const randomSizesSeed = new Array(33 * 16).fill(0).map(() => THREE.MathUtils.randFloat(1.8, 5));
   const randomSizes = Array.from(
     { length: Math.ceil(count / (33 * 16)) },
     () => randomSizesSeed,
@@ -43,7 +43,7 @@ export const generateLine = (pointsBoxSize: THREE.Vector3) => {
     const colors = [];
     const sizes = [];
     let index = 0;
-    for (let y = -pointsBoxSize.y / 4; y < pointsBoxSize.y / 4; y += 5) {
+    for (let y = -pointsBoxSize.y / 3; y < pointsBoxSize.y / 4; y += 5) {
       for (let i = -80; i <= 80; i += 5) {
         index += 1;
         const yOffset = heightOffset % (5 * 16);

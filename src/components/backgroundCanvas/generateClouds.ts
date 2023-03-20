@@ -15,7 +15,7 @@ export const generateClouds = (pointsBoxSize: THREE.Vector3) => {
   cloudGeometry.setFromPoints(cloudPoints);
   const cloudMaterial = new THREE.PointsMaterial({
     color: new THREE.Color('hsl(200,20%,100%)'),
-    size: 400,
+    size: 500,
     map: cloudTexture,
     blending: THREE.AdditiveBlending,
     depthTest: false,

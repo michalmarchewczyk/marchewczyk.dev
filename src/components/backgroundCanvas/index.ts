@@ -102,12 +102,12 @@ export const load = (canvas: HTMLCanvasElement) => {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setAnimationLoop(animate);
-  renderer.setClearColor(new THREE.Color('hsl(200,25%,75%)'), 1);
+  renderer.setClearColor(new THREE.Color('hsl(200,30%,75%)'), 1);
 
   const composer = new EffectComposer(renderer);
   const renderPass = new RenderPass(scene, camera);
   composer.addPass(renderPass);
-  const afterimagePass = new AfterimagePass(0.96);
+  const afterimagePass = new AfterimagePass(0.97);
   composer.addPass(afterimagePass);
 
   const resize = () => {

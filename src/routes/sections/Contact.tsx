@@ -5,7 +5,9 @@ import classes from './Contact.module.scss';
 function Contact() {
   return (
     <Section name={'contact'}>
-      <div className={classes.Contact}>Contact</div>
+      <div className={classes.Contact}>
+        <h2>Contact me</h2>
+      </div>
     </Section>
   );
 }
