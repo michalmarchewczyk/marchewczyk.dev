@@ -39,7 +39,7 @@ function About() {
           <p>
             Hey, my name is Michał Marchewczyk.
             <br />
-            I&apos;m a full-stack web&nbsp;developer from Kraków, Poland.
+            I&apos;m a full-stack web&nbsp;developer from Poland.
           </p>
           <p>
             I mostly create web applications and websites using JavaScript based technologies and

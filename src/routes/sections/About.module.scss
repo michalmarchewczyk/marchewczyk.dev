@@ -12,10 +12,22 @@
     width: 100%;
   }
 
+  @media (max-width: 1024px){
+    min-height: 95vh;
+  }
+
   div {
-    max-width: 55%;
+    max-width: 56%;
+    @media (max-width: 1024px){
+      font-size: 21px;
+      max-width: 60%;
+    }
+    @media (max-width: 768px){
+      max-width: 100%;
+      padding-bottom: 20px;
+    }
     p {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       margin-top: 0;
     }
   }
