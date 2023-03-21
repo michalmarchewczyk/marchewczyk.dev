@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { projects } from '../lib/projects';
-import { Carousel } from '@mantine/carousel';
+import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
 import classes from './Project.module.scss';
 import { ActionIcon, Badge, Box, Button, Text } from '@mantine/core';
 import ReactMarkdown from 'react-markdown';
@@ -13,6 +13,9 @@ function Project({ id }: { id: string }) {
   const project = projects.find((project) => project.key === id);
   const { hovered, ref } = useHover();
   const isMobile = useMediaQuery('(max-width: 768px)');
+  const [embla, setEmbla] = useState<Embla | null>(null);
+
+  useAnimationOffsetEffect(embla, 200);
 
   if (!project) {
     return <div>Project not found</div>;
@@ -20,6 +23,7 @@ function Project({ id }: { id: string }) {
   return (
     <div className={classes.ProjectContainer}>
       <Carousel
+        getEmblaApi={setEmbla}
         ref={ref}
         withIndicators
         className={classes.ProjectImages}
