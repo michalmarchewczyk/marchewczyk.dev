@@ -15,11 +15,12 @@
     font-weight: 700;
     backdrop-filter: blur(6px)  saturate(1.4);
     border: 1px solid rgba(255,255,255,0.6);
-    box-shadow: 0 4px 20px rgb(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgb(0,0,0,0.06);
     margin-top: 24px;
     padding-left: 16px;
     padding-right: 28px;
     margin-right: 28px;
+    border-radius: 8px;
     img {
       height: 26px;
     }

@@ -1,13 +1,22 @@
 .About {
-  min-height: 120vh;
-  border: 3px solid rgba(255, 0, 0, 0.1);
+  min-height: 80vh;
   font-size: 4rem;
-  padding-top: 30px;
+  padding-top: 20px;
+  position: relative;
+  margin-bottom: 60px;
 
   h2 {
     font-size: 50px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 16px;
     width: 100%;
+  }
+
+  div {
+    max-width: 55%;
+    p {
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
   }
 }

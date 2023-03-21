@@ -102,7 +102,7 @@ export const load = (canvas: HTMLCanvasElement) => {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setAnimationLoop(animate);
-  renderer.setClearColor(new THREE.Color('hsl(200,30%,75%)'), 1);
+  renderer.setClearColor(new THREE.Color('hsl(200,30%,78%)'), 1);
 
   const composer = new EffectComposer(renderer);
   const renderPass = new RenderPass(scene, camera);

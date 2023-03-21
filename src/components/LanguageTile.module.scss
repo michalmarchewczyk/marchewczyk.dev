@@ -1,0 +1,36 @@
+.Tile {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(6px)  saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 20px rgb(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+
+  transition: all 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+  &:hover {
+    background-color: rgba(255,255,255,0.7) !important;
+  }
+
+  img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+}
+
+.TileBig {
+  width: 120px;
+  height: 120px;
+  padding: 15px;
+  img {
+    width: 90px;
+    height: 90px;
+  }
+}
