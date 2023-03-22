@@ -1,0 +1,20 @@
+parameters: {}
+packages:
+    - name: contact
+      shared: false
+      parameters: {}
+      functions:
+        - name: contact-form
+          binary: false
+          main: ""
+          runtime: nodejs:18
+          web: true
+          webSecure: false
+          parameters: {}
+          environment: {}
+          annotations: {}
+          limits: {}
+environment:
+  SMTP_HOST: ${SMTP_HOST}
+  SMTP_USERNAME: ${SMTP_USERNAME}
+  SMTP_PASSWORD: ${SMTP_PASSWORD}

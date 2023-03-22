@@ -1,0 +1,11 @@
+{
+  "name": "contact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^6.9.1"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.7"
+  }
+}
