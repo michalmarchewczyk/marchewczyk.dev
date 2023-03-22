@@ -1,12 +1,30 @@
 .Contact {
   min-height: 80vh;
-  border: 3px solid red;
-  font-size: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  column-gap: 40px;
 
   h2 {
     font-size: 50px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 40px;
     width: 100%;
+    flex-shrink: 0;
+  }
+
+  > div {
+    flex: 1;
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      line-height: 1.8;
+      a {
+        color: black;
+      }
+    }
   }
 }

@@ -33,16 +33,27 @@ function main(args) {
     };
   }
   message = message.replaceAll('\n', '<br>');
-  return sendMail(name, email, message).then((res) => {
-    console.log('nodemailer success', res);
-    return {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      statusCode: 200,
-      body: JSON.stringify({ success: 'Message sent' }),
-    };
-  });
+  return sendMail(name, email, message)
+    .then((res) => {
+      console.log('nodemailer success', res);
+      return {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        statusCode: 200,
+        body: JSON.stringify({ success: 'Message sent' }),
+      };
+    })
+    .catch((err) => {
+      console.log('nodemailer error', err);
+      return {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Error sending message' }),
+      };
+    });
 }
 
 module.exports.main = main;
