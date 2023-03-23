@@ -7,6 +7,15 @@
   position: relative;
   align-items: flex-start;
 
+  > div:first-child {
+    @media (max-width: 950px) {
+      margin-bottom: 0;
+    }
+    @media (max-width: 720px) {
+      font-size: 28px;
+    }
+  }
+
   a {
     display: block;
     float: left;
@@ -40,6 +49,33 @@
   white-space: nowrap;
   height: 1.55em;
   position: relative;
+
+  @media (max-width: 950px) {
+    white-space: break-spaces;
+    height: 3.1em;
+    div {
+      margin-left: 0 !important;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: -10px !important;
+      span {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 44px;
+  }
+
+  @media (max-width: 460px) {
+    font-size: 36px;
+  }
 
   div {
     display: inline-block;
