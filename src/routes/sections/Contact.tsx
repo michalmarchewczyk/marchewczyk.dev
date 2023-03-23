@@ -14,7 +14,7 @@ function Contact() {
             Contact me directly:
           </Text>
           <p>
-            Email: <a href="mailto:dev@marchewczyk.eu">contact@marchewczyk.eu</a>
+            Email: <a href="mailto:contact@marchewczyk.eu">contact@marchewczyk.eu</a>
             <br />
             GitHub:{' '}
             <a href="https://github.com/michalmarchewczyk" target="_blank" rel="noreferrer">
