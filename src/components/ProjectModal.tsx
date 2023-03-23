@@ -35,7 +35,7 @@ function ProjectModal() {
       overlayProps={{
         color: '#cccccc',
         opacity: 0.5,
-        blur: 8,
+        blur: 6,
       }}
       radius={10}
       fullScreen={isMobile}
