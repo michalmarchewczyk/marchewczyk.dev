@@ -28,6 +28,7 @@
     display: block;
     align-self: stretch;
     img {
+      position: absolute;
       height: 100%;
       padding: 8px;
     }
@@ -54,6 +55,8 @@
     align-self: stretch;
     img {
       height: 100%;
+      width: 30px;
+      object-fit: contain;
       padding: 24px 0;
       margin-top: -1px;
     }
