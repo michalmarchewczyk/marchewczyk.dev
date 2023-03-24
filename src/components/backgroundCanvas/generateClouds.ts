@@ -6,7 +6,7 @@ export const generateClouds = (pointsBoxSize: THREE.Vector3) => {
   const cloudTexture = new THREE.TextureLoader().load(cloudJpg);
   const cloudPoints: THREE.Vector3[] = [];
   const cloudVelocities: THREE.Vector3[] = [];
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 200; i++) {
     cloudPoints.push(getRandomVector(pointsBoxSize));
     cloudVelocities.push(getRandomVector(new THREE.Vector3(0.1, 0.1, 0.1)));
   }
@@ -15,11 +15,11 @@ export const generateClouds = (pointsBoxSize: THREE.Vector3) => {
   cloudGeometry.setFromPoints(cloudPoints);
   const cloudMaterial = new THREE.PointsMaterial({
     color: new THREE.Color('hsl(200,20%,100%)'),
-    size: 500,
+    size: 600,
     map: cloudTexture,
     blending: THREE.AdditiveBlending,
     depthTest: false,
-    opacity: 0.025,
+    opacity: 0.03,
   });
   const cloud = new THREE.Points(cloudGeometry, cloudMaterial);
 
