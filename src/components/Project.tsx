@@ -77,11 +77,15 @@ function Project({ id }: { id: string }) {
         <Text color="black" size={40} weight={700} mt={0} mb={16}>
           {project.title}
         </Text>
-        {project.technologies.map((technology) => (
-          <Badge color={'dark'} key={technology} size={'xl'} variant={'outline'} mr={8} mb={8}>
-            {technology}
-          </Badge>
-        ))}
+        <div
+          className={!isMobile && project.github && project.url ? classes.ProjectTechnologies : ''}
+        >
+          {project.technologies.map((technology) => (
+            <Badge color={'dark'} key={technology} size={'xl'} variant={'outline'} mr={8} mb={8}>
+              {technology}
+            </Badge>
+          ))}
+        </div>
         <div className={classes.ProjectLinks}>
           {project.github && (
             <Button

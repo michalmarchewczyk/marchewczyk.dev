@@ -1,5 +1,5 @@
 .Projects {
-  min-height: 160vh;
+  min-height: 120vh;
   font-size: 1rem;
   display: flex;
   flex-direction: row;
@@ -8,6 +8,7 @@
   row-gap: 50px;
   column-gap: 50px;
   padding-top: 30px;
+  margin-bottom: 100px;
 
   h2 {
     font-size: 50px;
