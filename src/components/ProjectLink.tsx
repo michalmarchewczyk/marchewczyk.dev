@@ -39,7 +39,7 @@ function ProjectLink({ project }: { project: ProjectData }) {
             <Text color="#888888" size={20} weight={700}>
               {project.category}
             </Text>
-            <Text color="black" size={40} weight={700} mt={-4} mb={8}>
+            <Text color="black" size={40} weight={700} mt={4} mb={16} style={{ lineHeight: 1.2 }}>
               {project.title}
             </Text>
 
@@ -61,7 +61,7 @@ function ProjectLink({ project }: { project: ProjectData }) {
               radius={'xl'}
               size={'lg'}
               w={'100%'}
-              mt={20}
+              mt={12}
               color={'dark'}
               leftIcon={<img src={github} alt="" style={{ height: '28px', marginRight: '10px' }} />}
               component={Link}
@@ -77,7 +77,7 @@ function ProjectLink({ project }: { project: ProjectData }) {
               radius={'xl'}
               size={'lg'}
               w={'100%'}
-              mt={20}
+              mt={12}
               color={'dark'}
               leftIcon={<IconExternalLink size={32} style={{ marginRight: '10px' }} />}
               component={Link}
