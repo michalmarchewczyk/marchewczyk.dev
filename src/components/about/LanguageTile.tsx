@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react';
 import classes from './LanguageTile.module.scss';
 import { Tooltip, Text } from '@mantine/core';
 
-const images = import.meta.glob('../assets/languages/*.{png,svg,jpg}', {
+const images = import.meta.glob('../../assets/languages/*.{png,svg,jpg}', {
   as: 'url',
   eager: true,
 });
@@ -19,7 +19,7 @@ function LanguageTile({
   const langName = language.replaceAll('.', '').replaceAll(' ', '').toLowerCase();
   const image =
     Object.entries(images).find(([url]) =>
-      url.startsWith(`../assets/languages/${langName}`),
+      url.startsWith(`../../assets/languages/${langName}`),
     )?.[1] ?? '';
 
   return (
