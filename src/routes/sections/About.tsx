@@ -1,8 +1,8 @@
 import React from 'react';
-import Section from '../../components/Section';
+import Section from '../../components/layout/Section';
 import classes from './About.module.scss';
 import { Text } from '@mantine/core';
-import LanguageTile from '../../components/LanguageTile';
+import LanguageTile from '../../components/about/LanguageTile';
 
 const PRIMARY_LANGUAGES: [string, number, number][] = [
   ['JavaScript', 0, 60],

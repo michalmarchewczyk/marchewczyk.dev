@@ -4,17 +4,17 @@
   width: 80px;
   height: 80px;
   overflow: hidden;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 20px rgb(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgb(0, 0, 0, 0.1);
   border-radius: 12px;
   padding: 10px;
   margin: 10px;
 
   transition: background-color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
   &:hover {
-    background-color: rgba(255,255,255,0.7) !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
   }
 
   img {
@@ -23,7 +23,7 @@
     height: 60px;
     object-fit: contain;
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     position: relative;
     top: 0 !important;
     left: 0 !important;
@@ -38,7 +38,7 @@
     width: 90px;
     height: 90px;
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     width: 80px;
     height: 80px;
     padding: 10px;

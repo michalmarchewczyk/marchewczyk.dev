@@ -3,9 +3,9 @@ import { Route, Routes, useLocation, Location } from 'react-router-dom';
 import Layout from './routes/Layout';
 import Home from './routes/Home';
 import { useDocumentTitle } from '@mantine/hooks';
-import { SectionsContext } from './components/sections';
-import ProjectModal from './components/ProjectModal';
-import ProjectPage from './components/ProjectPage';
+import { SectionsContext } from './components/layout/sections';
+import ProjectModal from './components/projects/ProjectModal';
+import ProjectPage from './components/projects/ProjectPage';
 
 function App() {
   useDocumentTitle('Michał Marchewczyk');

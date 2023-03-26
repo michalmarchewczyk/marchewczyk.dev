@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '../../components/Section';
+import Section from '../../components/layout/Section';
 import classes from './Header.module.scss';
 import { Button, Text } from '@mantine/core';
 import { Link } from 'react-router-dom';

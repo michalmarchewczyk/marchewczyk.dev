@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../../components/Section';
+import Section from '../../components/layout/Section';
 import classes from './Contact.module.scss';
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '../../components/contact/ContactForm';
 import { Text } from '@mantine/core';
 
 function Contact() {

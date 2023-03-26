@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { projects } from '../lib/projects';
+import { projects } from '../../lib/projects';
 import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
 import classes from './Project.module.scss';
 import { ActionIcon, Badge, Box, Button, Text } from '@mantine/core';
@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { IconChevronLeft, IconChevronRight, IconExternalLink, IconX } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
 import { useHover, useMediaQuery } from '@mantine/hooks';
-import github from '../assets/github-white.svg';
+import github from '../../assets/github-white.svg';
 
 function Project({ id }: { id: string }) {
   const project = projects.find((project) => project.key === id);

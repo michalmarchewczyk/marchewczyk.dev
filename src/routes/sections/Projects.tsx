@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../../components/Section';
+import Section from '../../components/layout/Section';
 import classes from './Projects.module.scss';
-import ProjectLink from '../../components/ProjectLink';
+import ProjectLink from '../../components/projects/ProjectLink';
 import { projects } from '../../lib/projects';
 
 function Projects() {

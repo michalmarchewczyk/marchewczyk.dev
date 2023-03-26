@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import classes from './Navbar.module.scss';
 import { SectionsContext } from './sections';
 import { Link } from 'react-router-dom';
-import logotype from '../assets/logotype.png';
-import logo from '../assets/logo.png';
-import github from '../assets/github.svg';
+import logotype from '../../assets/logotype.png';
+import logo from '../../assets/logo.png';
+import github from '../../assets/github.svg';
 import { Burger, Container, MediaQuery, Tooltip } from '@mantine/core';
 import { useHover, useMergedRef, useMouse } from '@mantine/hooks';
 

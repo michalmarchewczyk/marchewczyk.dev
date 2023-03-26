@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { Badge, Button, Card, Text } from '@mantine/core';
 import classes from './ProjectLink.module.scss';
 import { useHover, useMergedRef, useMouse } from '@mantine/hooks';
-import github from '../assets/github-white.svg';
+import github from '../../assets/github-white.svg';
 import { IconExternalLink } from '@tabler/icons-react';
-import { ProjectData } from '../lib/projects';
+import { ProjectData } from '../../lib/projects';
 
 function ProjectLink({ project }: { project: ProjectData }) {
   const { ref: refMouse, x, y } = useMouse();

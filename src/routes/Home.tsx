@@ -4,7 +4,7 @@ import Header from './sections/Header';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
-import { SectionsContext } from '../components/sections';
+import { SectionsContext } from '../components/layout/sections';
 import { Container } from '@mantine/core';
 
 function Home() {

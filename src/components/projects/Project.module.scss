@@ -10,9 +10,9 @@
 }
 
 .Image {
-    display: block;
-    width: 100%;
-    max-width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 .BackButton {
@@ -21,10 +21,10 @@
   top: 16px;
   right: 16px;
   box-shadow: var(--mantine-shadow-md);
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   z-index: 100;
   &:hover {
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
   }
 }
 
@@ -51,5 +51,5 @@
 }
 
 .ProjectTechnologies {
-  max-width:calc(100% - 220px);
+  max-width: calc(100% - 220px);
 }

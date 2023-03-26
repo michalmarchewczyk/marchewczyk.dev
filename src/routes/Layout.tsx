@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Background from '../components/Background';
+import Navbar from '../components/layout/Navbar';
+import Background from '../components/layout/Background';
 
 function Layout() {
   return (
