@@ -23,6 +23,8 @@ export const load = (canvas: HTMLCanvasElement) => {
 
   scene.fog = new THREE.Fog(0x000000, 250, 310);
 
+  const cameraTarget = camera.position.clone();
+
   let lastTime = 0;
   const animate = (time: number) => {
     const delta = time - lastTime;
@@ -30,6 +32,7 @@ export const load = (canvas: HTMLCanvasElement) => {
     animCloud(delta);
     animStars(delta);
     animLine(delta);
+    camera.position.lerp(cameraTarget, 0.03);
     composer.render();
   };
 
@@ -47,8 +50,8 @@ export const load = (canvas: HTMLCanvasElement) => {
   const mouseMove = (e: MouseEvent) => {
     const x = e.clientX - window.innerWidth / 2;
     const y = e.clientY - window.innerHeight / 2;
-    camera.position.x = (20 * x) / window.innerWidth;
-    camera.position.y = (-20 * y) / window.innerHeight;
+    cameraTarget.x = (30 * x) / window.innerWidth;
+    cameraTarget.y = (-30 * y) / window.innerHeight;
   };
 
   const renderer = new THREE.WebGLRenderer({
