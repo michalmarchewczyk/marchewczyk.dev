@@ -1,5 +1,5 @@
 ---
-index: 1
+index: 0
 category: Web App
 size: lg
 title: Ecommerce Platform
