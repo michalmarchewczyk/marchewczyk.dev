@@ -19,7 +19,7 @@ export const generateClouds = (pointsBoxSize: THREE.Vector3) => {
     map: cloudTexture,
     blending: THREE.AdditiveBlending,
     depthTest: false,
-    opacity: 0.03,
+    opacity: 0.025,
   });
   const cloud = new THREE.Points(cloudGeometry, cloudMaterial);
 
