@@ -1,5 +1,5 @@
 .About {
-  min-height: 80vh;
+  min-height: 800px;
   font-size: 4rem;
   padding-top: 20px;
   position: relative;
@@ -13,7 +13,7 @@
   }
 
   @media (max-width: 1024px) {
-    min-height: 95vh;
+    min-height: 1000px;
   }
 
   div {

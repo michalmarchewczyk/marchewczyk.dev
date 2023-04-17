@@ -7,27 +7,29 @@ import LanguageTile from '../../components/about/LanguageTile';
 const PRIMARY_LANGUAGES: [string, number, number][] = [
   ['JavaScript', 0, 60],
   ['TypeScript', 8, 85],
-  ['React', 28, 66],
-  ['Next.js', 51, 83],
+  ['React', 25, 62],
+  ['Next.js', 43, 83],
   ['Angular', 60, 60],
   ['Node.js', 70, 0],
   ['NestJS', 78, 30],
 ];
 
 const LANGUAGES: [string, number, number][] = [
-  ['Svelte', 72, 78],
+  ['Svelte', 66, 74],
   ['HTML5', 10, 74],
-  ['CSS3', 29, 80],
-  ['SASS', 33, 92],
+  ['CSS3', 29, 76],
+  ['SASS', 31, 92],
   ['Tailwind CSS', 48, 72],
+  ['Vue.js', 63, 86],
+  ['Nuxt', 84, 88],
   ['Express.js', 68, 18],
-  ['Python', 88, 54],
+  ['Python', 88, 47],
   ['PHP', 86, 12],
   ['Docker', 62, 36],
   ['Git', 68, 48],
-  ['Figma', 80, 66],
-  ['Affinity Designer', 90, 76],
-  ['Blender', 82, 90],
+  ['Figma', 80, 58],
+  ['Affinity Designer', 92, 68],
+  ['Blender', 82, 76],
 ];
 
 function About() {
