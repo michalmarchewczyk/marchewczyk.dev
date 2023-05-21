@@ -1,7 +1,7 @@
 ---
 index: 2
 category: Web App
-size: lg
+size: sm
 title: Notes App
 description: Simple notes app built with Vue.js, Nuxt 3 and Firebase
 technologies: Vue.js, Nuxt 3, Firebase, PrimeVue
